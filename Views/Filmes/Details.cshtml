@@ -7,23 +7,23 @@
 <h1>Detalhes do filme</h1>
 
 <div>
-    <h4>Filme</h4>
+    <h4>@Html.DisplayFor(model => model.nome)</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nome)
+            Nome
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.nome)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nota)
+            Nota
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.nota)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.descricao)
+            Descrição
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.descricao)
