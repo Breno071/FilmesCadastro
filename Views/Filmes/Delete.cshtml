@@ -1,0 +1,39 @@
+﻿@model FilmesCadastro.Models.Filme
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar filme</h1>
+
+<h3>Tem certeza que deseja deletar @Html.DisplayFor(model => model.nome)?</h3>
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nome
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt class="col-sm-2">
+            Nota
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nota)
+        </dd>
+        <dt class="col-sm-2">
+            Descrição
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar para a lista de filmes</a>
+    </form>
+</div>

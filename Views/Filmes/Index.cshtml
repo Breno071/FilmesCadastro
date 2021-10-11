@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FilmesCadastro.Models.Filme>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Filmes</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar novo filme</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Nota
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nota)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descricao)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
